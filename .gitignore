@@ -25,6 +25,8 @@ dist/
 
 # JetBrains IDE
 .idea/
+__pychache__/
+venv/
 
 # Unit test reports
 TEST*.xml
