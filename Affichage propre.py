@@ -12,5 +12,5 @@ while i < len(t1):
     i += 1
 i = 0
 while i < len(t1):
-    print(t2[i], end =' ')
+    print(t2[i], end=' ')
     i += 1
