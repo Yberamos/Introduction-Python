@@ -33,7 +33,7 @@ can = Canvas(fen, width=size_carré*10, height=size_carré*10, bg='ivory')
 can.pack(side=TOP, padx=5, pady=5)
 
 Button(fen, text='damier', command=damier).pack(side=LEFT, padx=3, pady=3)
-Button(fen, text='pion', command=pion).pack(side=BOTTOM, padx=3, pady=3)
-Button(fen, text='Quitter', command=fen.destroy).pack(side=RIGHT, padx=3, pady=3)
+Button(fen, text='pion', command=pion).pack(side=RIGHT, padx=3, pady=3)
+Button(fen, text='Quitter', command=fen.destroy).pack(side=BOTTOM, padx=3, pady=3)
 
 fen.mainloop()
