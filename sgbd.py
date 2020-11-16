@@ -1,3 +1,26 @@
+def loadbd():
+    bd = {}
+    fname = input('Entrez le nom du fichier: ')
+    file = open(fname, 'r')
+    lignes = file.readlines()
+    file.close()
+    for ligne in lignes:
+        temp = ligne.split('@')
+        key = temp[0]
+        temp = temp[1]
+        values = temp.split('#')[0], temp.split('#')[1][:-1]
+        bd[key] = values
+    return bd
+
+
+def savebd(bd):
+    fname = input('Entrez le nom du fichier: ')
+    file = open(fname, 'a')
+    for key in bd:
+        file.write(key+'@'+str(bd[key][0])+'#'+str(bd[key][1])+'\n')
+    file.close()
+
+
 def recherchebd(bd):
     output = 'Nom: {}   -  âge: {} ans   - taille: {} m'
     while True:
@@ -33,8 +56,8 @@ def lecturerecord():
         nom = input("Entrez le nom: ")
         if nom == "":
             return ""
-        age = input("Entrez l'age: ")
-        taille = input("Entrez la taille: ")
+        age = int(input("Entrez l'age: "))
+        taille = float(input("Entrez la taille: "))
 
         print(output.format(nom, age, taille))
         choix = input("Ces informations sont-elles correctes? (n/Y)")
@@ -44,10 +67,10 @@ def lecturerecord():
     return [nom, age, taille]
 
 
-def main():
+def _main():
     bd = {}
     while True:
-        choix = input("Que voulez-vous faire? (A)jouter - (C)onsulter - (R)echercher - (Q)uitter ")
+        choix = input("Que voulez-vous faire? (A)jouter - (C)onsulter - (R)echercher - (E)nregistrer - (L)oad - (Q)uitter ")
         choix = choix.lower()
         if choix == 'a':
             ajoutdansbd(bd)
@@ -55,9 +78,13 @@ def main():
             affichagebd(bd)
         elif choix == 'r':
             recherchebd(bd)
+        elif choix == 'e':
+            savebd(bd)
+        elif choix == 'l':
+            bd = loadbd()
         elif choix == 'q':
             break
 
 
 if __name__ == "__main__":
-    main()
+    _main()
