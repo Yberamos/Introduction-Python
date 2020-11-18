@@ -70,7 +70,8 @@ def lecturerecord():
 def _main():
     bd = {}
     while True:
-        choix = input("Que voulez-vous faire? (A)jouter - (C)onsulter - (R)echercher - (E)nregistrer - (L)oad - (Q)uitter ")
+        choix = input("Que voulez-vous faire? (A)jouter - (C)onsulter - \
+                        (R)echercher - (E)nregistrer - (L)oad - (Q)uitter ")
         choix = choix.lower()
         if choix == 'a':
             ajoutdansbd(bd)
