@@ -1,7 +1,14 @@
 def inverse():
     new_dict = {}
     for key in dico:
-        new_dict[dico[key]] = key
+        print(dico[key])
+        valeur = dico[key]
+        clee = key
+
+        new_dict[valeur] = clee
+
+        cfg['Connections']['AssemblyLine']['Adresse']
+
     return new_dict
 
 
@@ -12,6 +19,9 @@ dico = {
     'Screen' : 'Ecran',
     'Hard Disk' : 'Disque dur'
 }
+inverse()
+# print(dico)
+# print(inverse())
 
-print(dico)
-print(inverse())
+
+

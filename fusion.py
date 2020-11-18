@@ -4,6 +4,8 @@ nameff = input('Premier fichier: ')
 namedf = input('Deuxieme fichier: ')
 namerf = input('Resultat fichier: ')
 
+input()
+
 
 ff = open(nameff, 'r')
 df = open(namedf, 'r')

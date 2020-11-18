@@ -3,6 +3,7 @@ def loadbd():
     fname = input('Entrez le nom du fichier: ')
     file = open(fname, 'r')
     lignes = file.readlines()
+    print(lignes)
     file.close()
     for ligne in lignes:
         temp = ligne.split('@')
@@ -17,7 +18,7 @@ def savebd(bd):
     fname = input('Entrez le nom du fichier: ')
     file = open(fname, 'a')
     for key in bd:
-        file.write(key+'@'+str(bd[key][0])+'#'+str(bd[key][1])+'\n')
+        file.write(key+'@:'+str(bd[key][0])+'#'+str(bd[key][1])+'\n')
     file.close()
 
 
