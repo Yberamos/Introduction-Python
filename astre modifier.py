@@ -149,6 +149,4 @@ Button(fra2, text='v', fg='blue', command=bas2).pack(side=LEFT)
 can1.bind("<Button-1>", detectionclic)
 
 
-
-
 fenetre.mainloop()
