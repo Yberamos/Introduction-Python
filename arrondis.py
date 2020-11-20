@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 # -*- coding:Utf8 -*-
-
 def triple(ligne):
     new, i = "", 0
     while i < len(ligne):
@@ -33,4 +32,3 @@ nomF = input('Nom de fichier à traiter : ')
 nomdestination = input('Nom de fichier à traiter : ')
 
 lireDansFichier()
-
